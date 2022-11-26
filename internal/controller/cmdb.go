@@ -22,6 +22,7 @@ import (
 	"github.com/crossplane/crossplane-runtime/pkg/controller"
 
 	"github.com/crossplane/provider-cmdb/internal/controller/config"
+	"github.com/crossplane/provider-cmdb/internal/controller/idenrecon"
 )
 
 // Setup creates all CMDB controllers with the supplied logger and adds them to
@@ -29,6 +30,7 @@ import (
 func Setup(mgr ctrl.Manager, o controller.Options) error {
 	for _, setup := range []func(ctrl.Manager, controller.Options) error{
 		config.Setup,
+		idenrecon.Setup,
 	} {
 		if err := setup(mgr, o); err != nil {
 			return err

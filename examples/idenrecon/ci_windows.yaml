@@ -1,15 +1,14 @@
 apiVersion: idenrecon.cmdb.crossplane.io/v1alpha1
 kind: CI
 metadata:
-  name: winci01
+  name: winci0001
 spec:
   forProvider:
     sysParamDataSource: ServiceNow
     className: cmdb_ci_win_server
-    name: winci01
+    name: winci0001
     values:
       ram: "1"
-      cpu: "2"
       os_domain: "test001"
       os_version: "test002"
   providerConfigRef:
