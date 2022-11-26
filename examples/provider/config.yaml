@@ -1,0 +1,13 @@
+apiVersion: cmdb.crossplane.io/v1alpha1
+kind: ProviderConfig
+metadata:
+  name: cmdb-default
+spec:
+  baseUrl: "dev125776.service-now.com"
+  username: "admin"
+  credentials:
+    source: Secret
+    secretRef:
+      namespace: crossplane-system
+      name: provider-cmdb-secret
+      key: credentials
