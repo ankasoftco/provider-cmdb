@@ -3,12 +3,21 @@ kind: Provider
 metadata:
   name: provider-cmdb
   annotations:
-    meta.crossplane.io/maintainer: Crossplane Maintainers <info@crossplane.io>
-    meta.crossplane.io/source: github.com/crossplane/provider-cmdb
+    meta.crossplane.io/maintainer: Crossplane Maintainers <support@ankasoft.co>
+    meta.crossplane.io/source: github.com/ankasoftco/provider-cmdb
     meta.crossplane.io/license: Apache-2.0
     meta.crossplane.io/description: |
-      A cmdb that can be used to create Crossplane providers.
+      ServiceNow CMDB Crossplane provider adds support for
+      managing CMDB Table, Identification and Reconciliation API and resources in Kubernetes.
+    meta.crossplane.io/readme: |
+      `provider-cmdb` is the Crossplane infrastructure provider for [ServiceNow CMDB](https://www.servicenow.com/products/servicenow-platform/configuration-management-database.html).
+      If you encounter an issue please reach out on
+      [slack.crossplane.io](https://slack.crossplane.io) and create an issue in
+      the
+      [ankasoftco/provider-jet-vra](https://github.com/ankasoftco/provider-cmdb)
+      repo.
 
 spec:
   controller:
-    image: DOCKER_REGISTRY/provider-cmdb-controller:VERSION
+    image: ankasoftware/provider-cmdb-controller:v0.0.1
+    #image: DOCKER_REGISTRY/provider-cmdb-controller:VERSION
